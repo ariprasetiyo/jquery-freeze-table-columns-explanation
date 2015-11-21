@@ -1,0 +1,21 @@
+- need lib jquery : https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
+- need lib jquery.freezetablecolumns.1.1.js
+- create code in  your js like this
+   $('#freeze_table').freezeTableColumns({
+            width:       100,   // fore not used
+            height:     100,   // fore not used
+            numFrozen:   1,     // optional, how many number column for frozen
+            frozenWidth: 80,   //fore not use
+            clearWidths: true  //optional
+    });
+    // main of dynamic page
+    var width_table = document.querySelector("#freeze_table-div");
+    width_table.style.width = "100%";
+    var myElement1 = document.querySelector("#freeze_table-region1");
+    myElement1.style.width = "10%";
+    var myElement2 = document.querySelector("#freeze_table-region2");
+    myElement2.style.width = "90%";
+    var myElement3 = document.querySelector("#freeze_table-region3");
+    myElement3.style.width = "10%";
+    var myElement4 = document.querySelector("#freeze_table-region4");
+    myElement4.style.width = "90%";
